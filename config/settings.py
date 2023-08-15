@@ -1,2 +1,2 @@
 DEBUG = True
-HELLO = 'hell mama'
+SERVER_NAME = 'localhost:8000'
