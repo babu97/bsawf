@@ -45,5 +45,43 @@ flake8==3.7.8
 # CLI.
 Click==6.4
 
+# Data and workers.
+
+# Hello. This is Nick from the future (October 2022 to be exact). Celery
+# started to break because they didn't version lock this dependency and it was
+# recently updated to 5.X which had breaking changes. Let's stick with 4.X.
+importlib-metadata==4.13.0
+
+# Hello. This is Nick from the future (December 2019 to be exact). Since we
+# upgraded to Python 3.7.x, we also have to update Celery to 4.3.x since older
+# versions of it are not compatible with Python 3.7+.
+#
+# This line is different than what's on video but we do cover this update in
+# more detail in the October 2019 update video.
+#
+# And this is Nick again from September 2020. Turns out Celery 4.3.x started to
+# break due to one of its dependencies not being locked. Now we're using 4.4.0.
+redis==3.3.7
+celery==4.4.0
+
+# Forms.
+Flask-WTF==0.9.5
+WTForms-Components==0.9.7
+
+# Hello. This is Nick from the future (Nov 2021 to be exact). WTForms 3.x came
+# out recently and has a number of backwards incompatible changes. Flask-WTF
+# will install the latest version so we need to version lock WTForms to 2.3.3.
+# A future update video will address using the latest WTForms version.
+WTForms==2.3.3
+
+# Hello. This is Nick from the future (March 2021 to be exact). Even though we're
+# not using SQLAlchemy yet, the WTForms-Components library uses it and installs
+# a version of SQLAlchemy (1.4) that's brand new and has a ton of breaking changes.
+#
+# To fix that we need to explicitly lock down SQLAlchemy to an older version
+# that works with most libraries. That's what this line below is doing.
+SQLAlchemy==1.2.0
+
 # Extensions.
 flask-debugtoolbar==0.10.0
+Flask-Mail==0.9.1

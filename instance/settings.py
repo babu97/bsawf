@@ -1,1 +1,3 @@
-HELLO ='MY ANGEL IS WHITEE AND I LOVE IT'
+
+MAIL_USERNAME = 'benkaimugul@gmail.com'
+MAIL_PASSWORD = 'wkbtijjsfwymtdhn'
